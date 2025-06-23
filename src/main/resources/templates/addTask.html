@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Task</title>
+    <link rel="stylesheet" th:href="@{/css/task.css}">
+</head>
+
+<body>
+    <div class="add-task-form">
+        <div id="error-msg" style="display: none; color: red; margin-bottom: 10px;"></div>
+        <form novalidate>
+            <div>
+                <label for="toDo">Task</label>
+                <input type="text" id="toDo" required />
+            </div>
+            <div>
+                <label for="toDoDate">Due Date</label>
+                <input type="date" id="toDoDate" required />
+            </div>
+            <div>
+                <label for="priority">Priority</label>
+                <select id="priority" required>
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                </select>
+            </div>
+
+            <div>
+                <button type="submit">Add Task</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- ✅ Inject env variable before JS -->
+    <script>
+        const API_BASE_URL = /*[[${apiBaseUrl}]]*/ "";
+    </script>
+    <script th:src="@{/js/addTask-script.js}"></script>
+</body>
+</html>

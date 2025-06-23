@@ -1,0 +1,97 @@
+/* Reset and Page Background */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #edfcff;
+    display: grid;
+    place-items: center;
+    box-sizing: border-box;
+}
+
+/* Main Login Card */
+main {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border: 2px solid #1d8aff44;
+    width: 90%;
+    max-width: 400px;
+    display: grid;
+    gap: 20px;
+    text-align: center;
+}
+
+/* Logo */
+.logo-container {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Layout */
+form {
+    display: grid;
+    gap: 20px;
+    text-align: left;
+}
+
+/* Labels */
+label {
+    font-weight: bold;
+    color: #3d7382;
+    margin-bottom: 5px;
+}
+
+/* Input Fields */
+input[type="text"],
+input[type="password"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Submit Button */
+button[type="submit"] {
+    background-color: #1d8aff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #0c6fd1;
+}
+
+/* Register Link */
+.register-link {
+    text-align: center;
+    margin-top: 10px;
+    color: #3d7382;
+    font-size: 0.95rem;
+}
+
+.register-link a {
+    color: #1d8aff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}

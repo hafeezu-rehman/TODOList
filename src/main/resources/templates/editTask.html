@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Task</title>
+    <link rel="stylesheet" th:href="@{/css/task.css}">
+</head>
+<body>
+
+<div class="edit-task-form">
+    <div id="error-msg" style="display: none; color: red; margin-bottom: 10px;"></div>
+    <form id="editTaskForm">
+        <input type="hidden" id="taskId" th:value="${previous.id}">
+
+        <div>
+            <label for="toDo">Task</label>
+            <input type="text" id="toDo" th:value="${previous.toDo}" required />
+        </div>
+        <div>
+            <label for="toDoDate">Due Date</label>
+            <input type="date" id="toDoDate" th:value="${previous.toDoDate}" required />
+        </div>
+        <div>
+            <label for="priority">Priority</label>
+            <select id="priority" required>
+                <option value="high" th:selected="${previous.priority == 'high'}">High</option>
+                <option value="medium" th:selected="${previous.priority == 'medium'}">Medium</option>
+                <option value="low" th:selected="${previous.priority == 'low'}">Low</option>
+            </select>
+        </div>
+
+        <div>
+            <button type="submit">Update Task</button>
+        </div>
+    </form>
+</div>
+
+<!-- ✅ Inject the API base URL -->
+<script>
+    const API_BASE_URL = /*[[${apiBaseUrl}]]*/ "";
+</script>
+<script th:src="@{/js/editTask-script.js}"></script>
+
+</body>
+</html>

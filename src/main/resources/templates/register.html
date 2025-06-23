@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" th:href="@{/css/register-login.css}">
+</head>
+
+<body>
+    <main>
+        <!-- Logo -->
+        <div class="logo-container">
+            <img src="/images/todolist.jpg" alt="ToDo List Logo" class="logo">
+        </div>
+
+        <!-- Registration Form -->
+        <form th:action="@{/register}" th:object="${user}" method="post" id="registerForm">
+            <div>
+                <label for="name">Name</label>
+                <input type="text" th:field="*{name}" id="name">
+            </div>
+            <div>
+                <label for="username">Username</label>
+                <input type="text" th:field="*{username}" id="username">
+            </div>
+            <div>
+                <label for="password">Password</label>
+                <input type="password" th:field="*{password}" id="password">
+            </div>
+            <div>
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password">
+            </div>
+            <button type="submit">Register</button>
+        </form>
+
+        <!-- Error Message (if any) -->
+        <div th:if="${error}" style="color: red; margin-top: 10px;">
+            <p th:text="${error}"></p>
+        </div>
+
+        <!-- Link to Login -->
+        <div class="register-link">
+            Already registered? <a th:href="@{/login}">Login here</a>
+        </div>
+    </main>
+    <script th:src="@{/js/register.js}"></script>
+</body>
+
+</html>

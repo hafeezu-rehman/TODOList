@@ -1,0 +1,126 @@
+html, body {
+    background-color: #edfcff;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+/* Header styling */
+.header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 10px 20px;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+#header-img {
+    justify-self: center;
+    text-align: center;
+}
+
+#header-img img {
+    max-width: 150px; /* Control size */
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Center horizontally */
+}
+#header-nav {
+    justify-self: end;
+    margin-right: 10%;
+}
+
+#header-nav nav a {
+    color: #1d8aff;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+/* Main content styles */
+h1 {
+    color: #3d7382;
+    font-family: Arial;
+    font-size: x-large;
+    text-align: center;
+    padding: 20px 10px 10px;
+}
+
+#image-para {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    padding: 20px;
+    align-items: center;
+}
+#image-para img {
+    max-width: 100%;
+    height: auto;
+}
+
+p {
+    color: #3d7382;
+    font-family: Arial;
+    line-height: 1.5;
+    font-size: 1rem;
+}
+
+.supcontainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.container {
+    text-align: center;
+    border: 1px solid yellowgreen;
+    padding: 15px;
+    margin: 0 10px;
+    box-shadow: 5px 10px yellowgreen;
+}
+
+h2 {
+    color: #3d7382;
+    font-family: Arial;
+    font-size: larger;
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Already present, but make sure it's specific and optimized */
+@media (max-width: 900px) {
+    .supcontainer {
+        grid-template-columns: 1fr; /* Stack boxes vertically */
+        gap: 20px; /* Add spacing between boxes */
+        padding: 10px;
+    }
+
+    .container {
+        margin: 0 auto; /* Center the box */
+        max-width: 90%; /* Keep box from going full width */
+        box-shadow: 3px 6px yellowgreen;
+    }
+
+    #image-para {
+        grid-template-columns: 1fr; /* Stack image and text */
+        padding: 10px;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}

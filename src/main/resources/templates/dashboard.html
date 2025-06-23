@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Dashboard</title>
+    <link rel="stylesheet" th:href="@{/css/dashboard.css}">
+</head>
+
+<body>
+    <div style="display: flex; justify-content: center; align-items: center; gap: 5%;">
+        <div><h2 th:text="'Welcome, ' + ${name} + '!'">Welcome!</h2></div>
+        <div><a style="background-color: red !important;" th:href="@{/logout}" class="button">Logout</a></div>
+    </div>
+
+    <div id="header">
+        <div id="header-left"><h2>TODO Tasks for Today</h2></div>
+        <div id="header-right"><a th:href="@{/addtask}" class="button">+ Add Task</a></div>
+    </div>
+    <div class="task-container">
+        <div id="high-priority" class="priority-column">
+            <h2>High Priority</h2>
+            <div class="task-list" id="high-list"></div>
+        </div>
+
+        <div id="medium-priority" class="priority-column">
+            <h2>Medium Priority</h2>
+            <div class="task-list" id="medium-list"></div>
+        </div>
+
+        <div id="low-priority" class="priority-column">
+            <h2>Low Priority</h2>
+            <div class="task-list" id="low-list"></div>
+        </div>
+    </div>
+    <h2>Upcoming TODOs</h2>
+    <div class="upcoming-task-container" id="upcoming-list"></div>
+
+    <!-- ✅ Inject API base URL -->
+    <script>
+        const API_BASE_URL = /*[[${apiBaseUrl}]]*/ "";
+    </script>
+    <script th:src="@{/js/script.js}"></script>
+</body>
+
+</html>

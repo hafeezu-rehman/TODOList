@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http:www.thymelead.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do Application</title>
+    <link rel="stylesheet" th:href="@{/css/home.css}">
+</head>
+
+<body>
+    <div class="wrapper">
+    <header>
+        <div class="header">
+            <div id="header-img"><img th:src="@{/images/todolist.jpg}" alt="To-Do List"></div>
+            <div id="header-nav">
+                <nav>
+                    <a th:href="@{/register}">Register</a>
+                    /
+                    <a th:href="@{/login}">Login</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div>
+            <h1>Why Choose ToDo List?</h1>
+        </div>
+        <div id="image-para">
+            <div>
+                <img th:src="@{/images/main-img.png}" alt="To-Do List Description">
+            </div>
+            <div>
+                <p>Stay organized, focused, and productive with ToDo List — your ultimate
+                    task management companion. Whether you're planning daily errands,
+                    managing work projects, or tracking long-term goals, ToDo List is designed
+                    to simplify your workflow. With an intuitive interface, lightning-fast performance, and seamless
+                    accessibility across devices, it's never been easier to stay on top of your priorities. Say goodbye
+                    to missed deadlines and scattered notes — choose ToDo List and take control of your time with
+                    confidence. <br>
+                    From setting reminders and creating categorized task lists to collaborating with others in real
+                    time, ToDo List offers powerful features without overwhelming complexity. Our clean design ensures
+                    you can focus on what matters most — getting things done. Whether you're a student, professional, or
+                    busy parent, ToDo List adapts to your lifestyle, helping you achieve more with less stress.
+                </p>
+            </div>
+        </div>
+        <div class="supcontainer">
+            <div class="container">
+                <h2>Track Your Tasks</h2>
+                <p>Easily manage your tasks.</p>
+            </div>
+            <div class="container">
+                <h2>Personalized Dashboard</h2>
+                <p>Customized for you.</p>
+            </div>
+            <div class="container">
+                <h2>Responsiveness</h2>
+                <p>Access from any device.</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        Copyright &copy To-Do List | All rights reserved
+    </footer>
+    </div>
+</body>
+
+</html>
